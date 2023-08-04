@@ -26,12 +26,12 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 }
 
 @media screen and (min-width: 968px) {
@@ -39,8 +39,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -56,10 +56,12 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .3s; /* For animation dark mode */
+  transition: 0.3s; /* For animation dark mode */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: 600;
 }
@@ -79,15 +81,12 @@ img {
 
 /*=============== THEME ===============*/
 
-
 /*========== Variables Dark theme ==========*/
-
 
 /*========== 
     Color changes in some parts of 
     the website, in light theme
 ==========*/
-
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -102,37 +101,96 @@ img {
 }
 
 /*=============== PROFILE ===============*/
-
-
+.profile {
+  position: relative;
+  padding-top: 3.5rem;
+}
+.profile__container {
+  row-gap: 2rem;
+}
+.profile__data {
+  display: grid;
+  text-align: center;
+}
+.profile__perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.profile__perfil img {
+  max-width: 105%;
+}
+.profile__border {
+  border: 3.5px solid var(--first-color);
+  justify-self: center;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.75rem;
+}
+.profile__name {
+  font-size: var(--h2-font-size);
+}
+.profile__profession {
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+.profile__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.75rem;
+}
+.profile__social-link {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  transition: 0.3s;
+}
+.profile__social-link:hover {
+  color: var(--first-color);
+}
+.profile__info {
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+.profile__info-group {
+  text-align: center;
+}
+.profile__info-number {
+  font-size: var(--normal-font-size);
+  margin-bottom: 0.25rem;
+}
+.profile__info-description {
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
+}
 /*=============== BUTTONS ===============*/
-
 
 /*=============== FILTERS TABS ===============*/
 
-
 /*=============== PROJECTS ===============*/
-
 
 /*=============== SKILLS ===============*/
 
-
 /* Hide and show projects & skills */
-
 
 /* Activate button filter */
 
-
 /*=============== FOOTER ===============*/
 
-
 /*=============== SCROLL BAR ===============*/
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
-
 /* For medium devices */
-
 
 /* For large devices */
