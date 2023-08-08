@@ -277,6 +277,12 @@ img {
   font-size: var(--h3-font-size);
   margin-bottom: 0.75rem;
 }
+.projects__button {
+  padding: 0.5rem;
+}
+.projects__card:hover .projects__modal {
+  bottom: 0;
+}
 /*=============== SKILLS ===============*/
 
 /* Hide and show projects & skills */
