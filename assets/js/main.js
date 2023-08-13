@@ -22,7 +22,7 @@ tabs.forEach((tab) => {
 /*=============== DARK LIGHT THEME ===============*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
-const iconTheme = "fa-sun";
+const iconTheme = "fa-moon";
 
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
@@ -30,13 +30,13 @@ const selectedIcon = localStorage.getItem("selected-icon");
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-  document.body.classList.contains(iconTheme) ? "fa-moon" : "fa-sun";
+  document.body.classList.contains(iconTheme) ? "fa-sun" : "fa-moon";
 
 if (selectedTheme) {
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+  document.body.classList[selectedTheme === "dark" ? "remove" : "add"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "fa-sun" ? "add" : "remove"](
+  themeButton.classList[selectedIcon === "fa-sun" ? "remove" : "add"](
     iconTheme
   );
 }
