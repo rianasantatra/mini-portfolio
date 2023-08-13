@@ -36,7 +36,7 @@ if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "fa-sun" ? "remove" : "add"](
+  themeButton.classList[selectedIcon === "fa-sun" ? "add" : "remove"](
     iconTheme
   );
 }
