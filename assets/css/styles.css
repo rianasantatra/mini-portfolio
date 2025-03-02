@@ -313,6 +313,7 @@ body.dark-theme {
   bottom: 0;
 }
 /*=============== SKILLS ===============*/
+/*=============== SKILLS ===============*/
 .skills__content {
   row-gap: 3.5rem;
 }
@@ -329,24 +330,46 @@ body.dark-theme {
 .skills__group {
   display: grid;
   align-content: flex-start;
-  row-gap: 1rem;
+  row-gap: 1.25rem; /* Légèrement augmenté pour l'espace avec les barres */
 }
 .skills__data {
   display: flex;
-  column-gap: 0.5rem;
-}
-.skills_data i {
-  font-size: 1rem;
-  color: var(--first-color);
+  flex-direction: column; /* Aligne le nom et la barre verticalement */
+  row-gap: 0.5rem;
 }
 .skills__name {
   font-size: var(--normal-font-size);
   font-weight: 500;
   line-height: 18px;
 }
-.skills__levels {
-  font-size: var(--smaller-font-size);
+
+/* Styles pour la barre de progression */
+.progress {
+  width: 100%;
+  height: 8px; /* Hauteur de la barre */
+  background-color: var(--text-color-lighten); /* Fond gris clair */
+  border-radius: 4px; /* Coins arrondis */
+  overflow: hidden; /* Cache les débordements */
 }
+.progress__bar {
+  height: 100%;
+  background-color: var(
+    --first-color
+  ); /* Couleur principale (violet par défaut) */
+  border-radius: 4px; /* Coins arrondis */
+  transition: width 0.3s ease-in-out; /* Animation fluide si la largeur change */
+}
+
+/* Adaptation au thème sombre */
+.dark-theme .progress {
+  background-color: hsl(var(--hue), 24%, 16%); /* Fond plus sombre */
+}
+.dark-theme .progress__bar {
+  background-color: var(
+    --first-color-alt
+  ); /* Couleur alternative pour contraste */
+}
+
 /* Hide and show projects & skills */
 .filters [data-content] {
   display: none;
@@ -435,7 +458,7 @@ body.dark-theme {
     column-gap: 2rem;
   }
   .projects__content {
-    gap: 2rem 3rem;
+    gap: 1rem 2rem;
   }
   .projects__modal {
     padding: 1.5rem;
